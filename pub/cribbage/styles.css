@@ -1,0 +1,102 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+div.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+tr:nth-child(4n+2), tr:nth-child(4n+1) {
+  background-color: lightgray;
+}
+table {
+  border-collapse: collapse;
+}
+.score-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.score-buttons > button {
+  flex: 1 1 auto;
+  width: 100%;
+  font-size: x-large;
+}
+.score-head {
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+.score-head:nth-child(2n+1) > div:nth-child(2n+1) {
+  background-color: lightgray;
+}
+.score-head:nth-child(2n) > div:nth-child(2n) {
+  background-color: lightgray;
+}
+.score-head > div {
+  font-size: x-large;
+}
+.command-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  margin-bottom: 10px;
+}
+
+.scoring-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-gap: 5px;
+  padding: 5px;
+}
+.scoring-buttons:nth-child(2n + 1) {
+  background-color: gainsboro;
+} 
+button {
+  display: inline-block;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  user-select: none;
+  font-weight: 400;
+  touch-action: manipulation;
+  border-radius: 4px;
+}
+button:hover {
+  color: #333;
+}
+button.with-count {
+  background-color: yellow;
+}
+.scoring-buttons > button, .command-row > button {
+  padding: 5px;
+  font-size: 20px;
+  /* margin: 5px; */
+}
+.scoring {
+  background-color: yellow;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-fill > div.scoring-buttons {
+  flex: 1 1 auto;
+}
