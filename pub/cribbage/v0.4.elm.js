@@ -5647,6 +5647,7 @@ var $elm$core$List$isEmpty = function (xs) {
 		return false;
 	}
 };
+var $elm$core$Basics$neq = _Utils_notEqual;
 var $elm$virtual_dom$VirtualDom$node = function (tag) {
 	return _VirtualDom_node(
 		_VirtualDom_noScript(tag));
@@ -6031,6 +6032,9 @@ var $author$project$Main$view = function (model) {
 				]);
 		} else {
 			var h = _v10.a;
+			var toAdd = $author$project$Main$totalScores(model.b);
+			var pluralize = (toAdd !== 1) ? 's' : '';
+			var pointDesc = '\n(' + ($elm$core$String$fromInt(toAdd) + ('pt' + (pluralize + ')')));
 			var _v11 = h.u;
 			switch (_v11) {
 				case 0:
@@ -6054,7 +6058,7 @@ var $author$project$Main$view = function (model) {
 										[
 											$elm$html$Html$text(
 											p1p2(
-												$author$project$Main$otherPlayer(h.j)) + '\'s Hand')
+												$author$project$Main$otherPlayer(h.j)) + ('\'s Hand' + pointDesc))
 										]))
 								]))
 						]);
@@ -6078,7 +6082,7 @@ var $author$project$Main$view = function (model) {
 									_List_fromArray(
 										[
 											$elm$html$Html$text(
-											p1p2(h.j) + '\'s Hand')
+											p1p2(h.j) + ('\'s Hand' + pointDesc))
 										]))
 								]))
 						]);
@@ -6102,7 +6106,7 @@ var $author$project$Main$view = function (model) {
 									_List_fromArray(
 										[
 											$elm$html$Html$text(
-											p1p2(h.j) + '\'s Crib')
+											p1p2(h.j) + ('\'s Crib' + pointDesc))
 										]))
 								]))
 						]);
